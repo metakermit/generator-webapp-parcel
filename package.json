@@ -1,0 +1,79 @@
+{
+  "name": "generator-webapp-parcel",
+  "version": "0.1.0",
+  "description": "Modern web app based on Parcel for zero-config ES6 & PostCSS",
+  "homepage": "https://github.com/metakermit/generator-webapp-parcel",
+  "author": {
+    "name": "Dražen Lučanin",
+    "email": "kermit666@gmail.com",
+    "url": "https://metakermit.com"
+  },
+  "files": [
+    "generators"
+  ],
+  "main": "generators/index.js",
+  "keywords": [
+    "parcel",
+    "webapp",
+    "es6",
+    "postcss",
+    "babel",
+    "yeoman-generator"
+  ],
+  "devDependencies": {
+    "yeoman-test": "^1.7.0",
+    "yeoman-assert": "^3.1.0",
+    "coveralls": "^3.0.0",
+    "nsp": "^2.8.0",
+    "eslint": "^4.19.1",
+    "prettier": "^1.11.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.1.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-config-xo": "^0.20.1",
+    "jest": "^22.0.6"
+  },
+  "engines": {
+    "npm": ">= 4.0.0"
+  },
+  "dependencies": {
+    "yeoman-generator": "^2.0.1",
+    "chalk": "^2.1.0",
+    "yosay": "^2.0.1"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "scripts": {
+    "prepublishOnly": "nsp check",
+    "pretest": "eslint .",
+    "precommit": "lint-staged",
+    "test": "jest"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "xo",
+      "prettier"
+    ],
+    "env": {
+      "jest": true,
+      "node": true
+    },
+    "plugins": [
+      "prettier"
+    ]
+  },
+  "repository": "metakermit/generator-webapp-parcel",
+  "license": "MIT"
+}
