@@ -27,7 +27,8 @@ module.exports = class extends Generator {
 
   writing() {
     this.fs.copy(
-      this.templatePath("{/**/*,*}"),
+      this.templatePath("{/**/*,*,.*}"),
+      // Without this "destionation" part writes to parent folder
       this.destinationPath("./destination/"),
       this.props
     );
