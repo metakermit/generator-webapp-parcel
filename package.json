@@ -1,6 +1,6 @@
 {
   "name": "generator-webapp-parcel",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Modern web app based on Parcel for zero-config ES6 & PostCSS",
   "homepage": "https://github.com/metakermit/generator-webapp-parcel",
   "author": {
